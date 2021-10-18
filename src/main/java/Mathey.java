@@ -83,6 +83,7 @@ public class Mathey {
      *     randomInteger(5) => 0
      */
     public static int randomInteger(int x){
+
         return (int)(Math.random() * (x + 1));
     }
 
@@ -100,7 +101,14 @@ public class Mathey {
      * Ex. pow(2, 5) => 32
      *     pow(3, 4) => 81
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int pow(int x, int y){
+        int holder = x;
+        while (y > 1){
+            x = x * holder;
+            y--;
+        }
+     return x;
+    }
 
 
 
@@ -110,7 +118,12 @@ public class Mathey {
      * Ex. abs(2) => 2
      *     abs(-2) => 2
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int abs(int x){
+        if (x <= 0){
+            x = x * -1;
+        }
+        return x;
+    }
 
 
 
@@ -121,7 +134,12 @@ public class Mathey {
      * Ex. round(2.4) => 2
      *     round(2.5) => 2
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static double round(double x){
+        x = x + 0.5;
+        x = (int)x;
+
+        return x;
+    }
 
 
 
@@ -135,7 +153,11 @@ public class Mathey {
      * Ex. floor(2.4) => 2
      *     floor(2.999999999999) => 2
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static double floor(double x){
+        x = (int)x;
+
+        return x;
+    }
 
 
 
@@ -149,7 +171,12 @@ public class Mathey {
      * Ex. ceil(2.99999) => 3
      *     ceil(3.01) => 4
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static double ceil(double x){
+        x = x + 1;
+        x = (int)x;
+
+        return x;
+    }
 
 
 
